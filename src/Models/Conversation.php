@@ -71,7 +71,7 @@ class Conversation extends BaseModel
      */
     public function messages()
     {
-        return $this->hasMany(Message::class, 'conversation_id'); //->with('sender');
+        return $this->hasMany(Message::class, 'conversation_id')->with('participation');
     }
 
     /**
